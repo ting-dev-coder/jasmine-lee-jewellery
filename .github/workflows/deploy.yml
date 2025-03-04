@@ -3,57 +3,56 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # 或者根據需要推送的分支
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the code from the repository
+      # 1. Checkout code
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Step 2: Set up SSH for authentication using the SSH key stored in GitHub secrets
+      # 2. Set up SSH for authentication
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.5.3
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      # Step 3: Install dependencies
+      # 3. Install dependencies
       - name: Install dependencies
-        run: |
-          npm install
+        run: npm install
 
-      # Step 4: Build the project
+      # 4. Build the project (確保 build 輸出到 dist/spa)
       - name: Build the project
-        run: |
-          npm run build
+        run: npm run build
 
-      # Step 5: Deploy the build output to GitHub Pages (gh-pages branch)
+      # 5. Deploy only the build output to gh-pages branch
       - name: Deploy to gh-pages
         run: |
-          # Configure git with a dummy user (GitHub Actions bot)
+          # 設定 Git 使用者資訊
           git config user.name "github-actions"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          # Set the remote URL to use SSH
+          
+          # 使用 SSH 方式設定遠端 URL
           git remote set-url origin git@github.com:${{ github.repository }}.git
-
-          # Create a new orphan branch for gh-pages
+          
+          # 創建一個新的孤立分支 gh-pages
           git checkout --orphan gh-pages
-
-          # Remove all existing files from the new branch
+          
+          # 刪除所有檔案，確保分支是空的
           git rm -rf .
-
-          # Copy the built static files (adjust the folder if your output folder is different)
+          
+          # 複製 build 輸出目錄中的所有檔案到分支根目錄
           cp -r dist/spa/* .
-
-          # Add all files
+          
+          # 檢查是否只複製了 build 後的內容，如果 build 輸出正確，此處不應該包含 .quasar、node_modules 等
+          ls -la
+          
+          # 將檔案加入版本控制，並 commit
           git add -A
-
-          # Commit the changes
           git commit -m "Deploy to GitHub Pages"
-
-          # Push the changes to the gh-pages branch using SSH
-          git push --force --set-upstream git@github.com:${{ github.repository }} gh-pages
+          
+          # 強制推送到遠端 gh-pages 分支
+          git push --force --set-upstream origin gh-pages
