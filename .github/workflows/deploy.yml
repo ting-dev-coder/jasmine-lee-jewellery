@@ -30,7 +30,7 @@ jobs:
         run: |
           npm run build
 
-      # Step 5: Deploy to GitHub Pages
+      # Step 5: Deploy the build output to GitHub Pages (gh-pages branch)
       - name: Deploy to gh-pages
         run: |
           # Configure git with a dummy user (GitHub Actions bot)
@@ -40,13 +40,19 @@ jobs:
           # Set the remote URL to use SSH
           git remote set-url origin git@github.com:${{ github.repository }}.git
 
-          # Create or switch to the gh-pages branch (without keeping any history)
+          # Create a new orphan branch for gh-pages
           git checkout --orphan gh-pages
 
-          # Add all files to git
+          # Remove all existing files from the new branch
+          git rm -rf .
+
+          # Copy the built static files (adjust the folder if your output folder is different)
+          cp -r dist/spa/* .
+
+          # Add all files
           git add -A
 
-          # Commit changes (if there are changes)
+          # Commit the changes
           git commit -m "Deploy to GitHub Pages"
 
           # Push the changes to the gh-pages branch using SSH
