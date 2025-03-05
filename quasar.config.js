@@ -43,7 +43,6 @@ export default defineConfig((/* ctx */) => {
       // vueOptionsAPI: false,
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
-      vueRouterMode: 'hash',
       publicPath: '/jasmine-lee-jewellery/',
       // analyze: true,
       // env: {},
