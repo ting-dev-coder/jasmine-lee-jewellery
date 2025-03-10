@@ -1,1 +1,12 @@
 // app global css in SCSS form
+@use 'base/reset';
+
+.container {
+  width: min(85vw, 1200px);
+}
+
+.container_full-screen {
+  width: 100vw;
+  margin-inline-start: 50%;
+  transform: translateX(-50%);
+}
