@@ -18,10 +18,13 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+    <TheFooter />
   </q-layout>
 </template>
 
 <script setup>
+import TheFooter from '@components/TheFooter'
+
 const menu = [
   {
     label: 'About',

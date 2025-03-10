@@ -2,6 +2,7 @@
 // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file
 
 import { defineConfig } from '#q-app/wrappers'
+import path from 'path'
 
 export default defineConfig((/* ctx */) => {
   return {
@@ -29,14 +30,15 @@ export default defineConfig((/* ctx */) => {
       'roboto-font', // optional, you are not bound to it
       'material-icons', // optional, you are not bound to it
     ],
-
+    resolve: {
+      extensions: ['.vue', '.js', '.ts'],
+    },
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#build
     build: {
       target: {
         browser: ['es2022', 'firefox115', 'chrome115', 'safari14'],
         node: 'node20',
       },
-
       vueRouterMode: 'hash', // available values: 'hash', 'history'
       // vueRouterBase,
       // vueDevtools,
@@ -52,7 +54,13 @@ export default defineConfig((/* ctx */) => {
       // polyfillModulePreload: true,
       // distDir
 
-      // extendViteConf (viteConf) {},
+      extendViteConf(viteConf, { isServer, isClient }) {
+        viteConf.resolve.extensions = ['.vue', '.js', '.ts']
+        Object.assign(viteConf.resolve.alias, {
+          '@': path.resolve(__dirname, 'src'),
+          '@components': path.resolve(__dirname, 'src/components'),
+        })
+      },
       // viteVuePluginOptions: {},
 
       vitePlugins: [
