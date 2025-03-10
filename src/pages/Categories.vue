@@ -1,5 +1,5 @@
 <template>
-  <q-page>
+  <q-page class="q-mb-xl">
     <Banner
       title="Permanent Jewellery"
       :breadcrumbs="['Home', 'Collections', 'Permanent Jewelry']"

@@ -1,5 +1,5 @@
 <template>
-  <q-page>
+  <q-page class="q-mb-xl">
     <Banner title="Collections" :breadcrumbs="['Home', 'Collections']" />
     <div class="q-mt-xl q-mb-md container q-mx-auto row justify-end">
       <q-select filled v-model="priceOrder" :options="options" dense />

@@ -1,5 +1,5 @@
 <template>
-  <section class="q-pt-xl">
+  <section class="q-pt-xl q-mb-xl">
     <h2>Our Best Sellers</h2>
     <div class="row">
       <div class="col row q-col-gutter-md">

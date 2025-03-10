@@ -1,5 +1,5 @@
 <template>
-  <section class="q-mt-xl row q-py-xl bg-grey-5">
+  <section class="row q-py-xl bg-grey-5">
     <div class="row container q-mx-auto q-col-gutter-md">
       <div class="col-6">
         <h3>Sign Up Today</h3>
