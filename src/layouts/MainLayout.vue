@@ -1,18 +1,20 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated style="height: 100px" class="flex justify-between align-items">
-      <q-img width="220px" height="100%" src="logo.png" />
-      <ul class="self-center">
-        <q-btn
-          class="q-ml-sm"
-          dense
-          flat
-          v-for="(item, idx) in menu"
-          :key="`menu-${idx}`"
-          :to="item.path"
-          >{{ item.label }}</q-btn
-        >
-      </ul>
+    <q-header style="height: 100px" class="bg-grey-6">
+      <div class="container flex justify-between align-items full-height">
+        <img style="height: 100%" src="logo.png" />
+        <ul class="self-center">
+          <q-btn
+            class="q-ml-sm"
+            dense
+            flat
+            v-for="(item, idx) in menu"
+            :key="`menu-${idx}`"
+            :to="item.path"
+            >{{ item.label }}</q-btn
+          >
+        </ul>
+      </div>
     </q-header>
 
     <q-page-container>
