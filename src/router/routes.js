@@ -19,6 +19,11 @@ const routes = [
         component: () => import('src/pages/Categories.vue'),
       },
       {
+        path: ':id/:categoryId/:productId',
+        name: 'Product',
+        component: () => import('src/pages/Product.vue'),
+      },
+      {
         path: 'custom-work',
         name: 'CustomWork',
         component: () => import('src/pages/CustomWork.vue'),

@@ -28,6 +28,9 @@ const options = ['Low to High', ' High to Low']
 const priceOrder = ref('Low to High')
 const router = useRouter()
 function onCollectionsClick(collection) {
-  router.push({ name: 'Categories', params: { id: collection.id } })
+  router.push({
+    name: 'Categories',
+    params: { id: collection.id },
+  })
 }
 </script>

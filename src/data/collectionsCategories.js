@@ -1,148 +1,184 @@
 export const Collections = [
   {
     id: 0,
+    collectionId: 10,
     title: 'Sterling Silver Hoop Earrings',
     price: 150,
   },
   {
     id: 1,
+    categoryId: 11,
     title: 'Luxe Silver Hoop Earrings',
     price: 85,
   },
   {
     id: 2,
+    categoryId: 12,
     title: 'Pearl Drop Earrings',
     price: 120,
   },
   {
     id: 3,
+    categoryId: 13,
     title: 'Luna Pearl Necklace',
     price: 180,
   },
   {
     id: 4,
+    categoryId: 14,
+    title: 'Rose Gold Engagement Ring',
+    price: 250,
+  },
+  {
+    id: 5,
+    categoryId: 15,
     title: 'Rose Gold Engagement Ring',
     price: 250,
   },
 ]
 export const Categories = [
   {
-    id: 0,
+    id: 10,
+    collectionId: 0,
     categories: [
       {
-        id: '',
+        id: 101,
         title: 'Infinity Symbol Bracelet',
         price: 130,
+        imagePath: 'image-placeholder.png',
       },
       {
-        id: '',
+        id: 102,
         title: 'Fine Rose Gold Chain',
         price: 170,
+        imagePath: 'image-placeholder.png',
       },
       {
-        id: '',
+        id: 103,
         title: 'Delicate Heart Pendant Necklace',
         price: 140,
+        imagePath: 'image-placeholder.png',
       },
     ],
   },
   {
-    id: 1,
+    id: 11,
+    collectionId: 1,
     categories: [
       {
-        id: '',
+        id: 111,
         title: 'Infinity Symbol Bracelet',
         price: 130,
+        imagePath: 'image-placeholder.png',
       },
       {
-        id: '',
+        id: 112,
         title: 'Fine Rose Gold Chain',
         price: 170,
+        imagePath: 'image-placeholder.png',
       },
       {
-        id: '',
+        id: 113,
         title: 'Delicate Heart Pendant Necklace',
         price: 140,
+        imagePath: 'image-placeholder.png',
       },
     ],
   },
   {
-    id: 2,
+    id: 12,
+    collectionId: 2,
     categories: [
       {
-        id: '',
+        id: 121,
         title: 'Infinity Symbol Bracelet',
         price: 130,
+
+        imagePath: 'image-placeholder.png',
       },
       {
-        id: '',
+        id: 122,
         title: 'Fine Rose Gold Chain',
         price: 170,
+        imagePath: 'image-placeholder.png',
       },
       {
-        id: '',
+        id: 123,
         title: 'Delicate Heart Pendant Necklace',
         price: 140,
+        imagePath: 'image-placeholder.png',
       },
     ],
   },
   {
-    id: 3,
+    id: 13,
+    collectionId: 3,
     categories: [
       {
-        id: '',
+        id: 131,
         title: 'Infinity Symbol Bracelet',
         price: 130,
+        imagePath: 'image-placeholder.png',
       },
       {
-        id: '',
+        id: 132,
         title: 'Fine Rose Gold Chain',
         price: 170,
+        imagePath: 'image-placeholder.png',
       },
       {
-        id: '',
+        id: 133,
         title: 'Delicate Heart Pendant Necklace',
         price: 140,
+        imagePath: 'image-placeholder.png',
       },
     ],
   },
   {
-    id: 4,
+    id: 14,
+    collectionId: 4,
     categories: [
       {
-        id: '',
+        id: 141,
         title: 'Infinity Symbol Bracelet',
         price: 130,
+        imagePath: 'image-placeholder.png',
       },
       {
-        id: '',
+        id: 142,
         title: 'Fine Rose Gold Chain',
         price: 170,
+        imagePath: 'image-placeholder.png',
       },
       {
-        id: '',
+        id: 143,
         title: 'Delicate Heart Pendant Necklace',
         price: 140,
+        imagePath: 'image-placeholder.png',
       },
     ],
   },
   {
     id: 5,
+    collectionId: 5,
     categories: [
       {
-        id: '',
+        id: 151,
         title: 'Infinity Symbol Bracelet',
         price: 130,
+        imagePath: 'image-placeholder.png',
       },
       {
-        id: '',
+        id: 152,
         title: 'Fine Rose Gold Chain',
         price: 170,
+        imagePath: 'image-placeholder.png',
       },
       {
-        id: '',
+        id: 153,
         title: 'Delicate Heart Pendant Necklace',
         price: 140,
+        imagePath: 'image-placeholder.png',
       },
     ],
   },
