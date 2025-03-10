@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-grey-4 q-py-md q-mb-xl">
+  <section class="bg-grey-4 q-py-md">
     <div class="container">
       <q-breadcrumbs style="font-size: 16px">
         <q-breadcrumbs-el
@@ -8,7 +8,7 @@
           :label="breadcrumb"
         />
       </q-breadcrumbs>
-      <h2 class="text-center q-py-xl">{{ title }}</h2>
+      <h2 v-if="title" class="text-center q-mb-xl q-py-xl">{{ title }}</h2>
     </div>
   </section>
 </template>

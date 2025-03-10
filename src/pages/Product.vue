@@ -1,6 +1,9 @@
 <template>
   <q-page>
-    <section class="container row q-col-gutter-lg">
+    <Banner
+      :breadcrumbs="['Home', 'Collections', 'Silver Collection', 'Sterling Silver Hoop Earrings']"
+    />
+    <section class="q-pt-xl container row q-col-gutter-lg">
       <q-carousel
         class="col bg-primary text-white shadow-1 rounded-borders"
         v-model="slide"
@@ -106,6 +109,7 @@
   </q-page>
 </template>
 <script setup>
+import Banner from 'src/components/Banner.vue'
 import BaseCard from 'src/components/BaseCard.vue'
 import { CustomWork } from 'src/data/customWork'
 import { ref } from 'vue'
