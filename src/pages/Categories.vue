@@ -1,16 +1,19 @@
 <template>
   <q-page>
-    <Banner title="Collections" :breadcrumbs="['Home', 'Collections']" />
+    <Banner
+      title="Permanent Jewellery"
+      :breadcrumbs="['Home', 'Collections', 'Permanent Jewelry']"
+    />
     <div class="q-mt-xl q-mb-md container q-mx-auto row justify-end">
       <q-select filled v-model="priceOrder" :options="options" dense />
     </div>
     <div class="container q-mx-auto row q-col-gutter-md">
-      <div class="col-3" v-for="(collection, idx) in Collections" :key="`collection-${idx}`">
-        <q-card @click="onCollectionsClick(collection)">
+      <div class="col-3" v-for="(category, idx) in Category?.categories" :key="`collection-${idx}`">
+        <q-card>
           <img style="height: 200px" src="image-placeholder.png" />
           <div class="q-px-md q-py-sm">
-            <h3>{{ collection.title }}</h3>
-            <span class="block q-py-sm">${{ collection.price }}</span>
+            <h3>{{ category.title }}</h3>
+            <span class="block q-py-sm">${{ category.price }}</span>
             <q-btn class="full-width" flat>SHOP NOW</q-btn>
           </div>
         </q-card>
@@ -20,14 +23,15 @@
 </template>
 <script setup>
 import Banner from 'src/components/Banner.vue'
-import { Collections } from 'src/data/collectionsCategories'
+import { Categories } from 'src/data/collectionsCategories'
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 
 const options = ['Low to High', ' High to Low']
 const priceOrder = ref('Low to High')
-const router = useRouter()
-function onCollectionsClick(collection) {
-  router.push({ name: 'Categories', params: { id: collection.id } })
-}
+const route = useRoute()
+const id = route.params.id
+const Category = Categories.find((category) => category.id === Number(id))
+
+console.log(Categories, id)
 </script>
