@@ -7,7 +7,7 @@
     <h2>Let’s Create Your Perfect Piece</h2>
     <p>
       Ready to bring your vision to life? Book a personal consultation with Jasmine Lee and design
-      your custom jewellery piece today
+      your custom jewelry piece today
     </p>
     <q-btn dense class="self-center">Book Your Consultation</q-btn>
   </section>

@@ -3,10 +3,10 @@
     <Banner title="Custom Work" :breadcrumbs="['Home', 'Custom Work']" />
     <section class="container row q-col-gutter-md">
       <div class="col column justify-center q-gutter-y-lg">
-        <h3>Custom Jewellery: Crafted Just for You</h3>
+        <h3>Custom Jewelry: Crafted Just for You</h3>
         <p>
           Design a piece that tells your unique story. Work closely with Jasmine Lee to create a
-          one-of-a-kind jewellery piece, from engagement rings to special keepsakes, made with
+          one-of-a-kind jewelry piece, from engagement rings to special keepsakes, made with
           high-quality materials and expert craftsmanship.
         </p>
       </div>
@@ -22,7 +22,7 @@
       </div>
     </section>
     <section class="q-pb-xl row container q-col-gutter-md">
-      <h3 class="col-12 text-center q-pb-lg">Our Custom Jewellery Process</h3>
+      <h3 class="col-12 text-center q-pb-lg">Our Custom jewelry Process</h3>
       <div class="col-6" v-for="(item, idx) in process" :key="`process-${idx}`">
         <q-card flat bordered>
           <q-card-section class="bg-grey-5"> {{ idx + 1 }}. {{ item.step }} </q-card-section>

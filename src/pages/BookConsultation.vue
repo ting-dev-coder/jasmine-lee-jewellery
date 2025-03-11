@@ -3,7 +3,7 @@
     <Banner title="Book a Consultation" :breadcrumbs="['Home', 'Book a Consultation']" />
 
     <div class="q-pa-md q-mx-auto" style="max-width: 550px">
-      <h3 class="text-center q-pb-xl">Start Your Custom Jewellery Journey</h3>
+      <h3 class="text-center q-pb-xl">Start Your Custom Jewelry Journey</h3>
       <q-form @submit="onSubmit" class="q-gutter-md">
         <q-input
           filled

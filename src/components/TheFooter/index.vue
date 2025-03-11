@@ -7,9 +7,9 @@
         <div class="col">
           <h4>Discover More</h4>
           <p class="q-py-md">
-            Explore the artistry behind Jasmine Lee Jewellery. From handcrafted collections to
-            custom designs, discover the inspiration, materials, and craftsmanship that make each
-            piece unique.
+            Explore the artistry behind Jasmine Lee jewelry. From handcrafted collections to custom
+            designs, discover the inspiration, materials, and craftsmanship that make each piece
+            unique.
           </p>
         </div>
         <div class="col">
@@ -42,7 +42,7 @@
     </div>
     <div class="bg-grey-5">
       <p class="container q-py-sm q-mx-auto text-center">
-        © 2025 Jasmine Lee Jewellery. All rights reserved.
+        © 2025 Jasmine Lee jewelry. All rights reserved.
       </p>
     </div>
   </footer>

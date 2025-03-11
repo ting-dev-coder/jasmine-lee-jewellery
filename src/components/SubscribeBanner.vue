@@ -5,7 +5,7 @@
         <h3>Sign Up Today</h3>
         <p class="q-py-md">
           Stay updated with the latest collections, exclusive promotions, and special offers. Sign
-          up today to receive all the exciting news from Jasmine Lee Jewellery!
+          up today to receive all the exciting news from Jasmine Lee jewelry!
         </p>
       </div>
       <div class="col-6">

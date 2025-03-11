@@ -45,7 +45,7 @@ export default defineConfig((/* ctx */) => {
       // vueOptionsAPI: false,
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
-      publicPath: '/jasmine-lee-jewellery/',
+      publicPath: '/jasmine-lee-jewelry/',
       // analyze: true,
       // env: {},
       // rawDefine: {}
@@ -194,7 +194,7 @@ export default defineConfig((/* ctx */) => {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'jasmine-lee-jewellery',
+        appId: 'jasmine-lee-jewelry',
       },
     },
 

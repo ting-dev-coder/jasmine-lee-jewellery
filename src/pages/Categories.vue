@@ -1,9 +1,6 @@
 <template>
   <q-page class="q-mb-xl">
-    <Banner
-      title="Permanent Jewellery"
-      :breadcrumbs="['Home', 'Collections', 'Permanent Jewelry']"
-    />
+    <Banner title="Permanent Jewelry" :breadcrumbs="['Home', 'Collections', 'Permanent Jewelry']" />
     <div class="q-mt-xl q-mb-md container q-mx-auto row justify-end">
       <q-select filled v-model="priceOrder" :options="options" dense />
     </div>
