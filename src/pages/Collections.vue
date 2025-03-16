@@ -2,16 +2,20 @@
   <q-page class="q-mb-xl">
     <Banner title="Collections" :breadcrumbs="['Home', 'Collections']" />
     <div class="q-mt-xl q-mb-md container q-mx-auto row justify-end">
-      <q-select filled v-model="priceOrder" :options="options" dense />
+      <q-select bg-color="primary" filled v-model="priceOrder" :options="options" dense />
     </div>
     <div class="container q-mx-auto row q-col-gutter-md">
-      <div class="col-3" v-for="(collection, idx) in Collections" :key="`collection-${idx}`">
-        <q-card @click="onCollectionsClick(collection)">
-          <img style="height: 200px" src="image-placeholder.png" />
-          <div class="q-px-md q-py-sm">
-            <h3>{{ collection.title }}</h3>
-            <span class="block q-py-sm">${{ collection.price }}</span>
-            <q-btn class="full-width" flat>SHOP NOW</q-btn>
+      <div
+        class="col-4 col-md-3"
+        v-for="(collection, idx) in Collections"
+        :key="`collection-${idx}`"
+      >
+        <q-card class="full-height column" @click="onCollectionsClick(collection)">
+          <img style="height: 200px" src="custom5.jpg" />
+          <div class="col q-px-md q-py-sm column bg-primary">
+            <h3 class="text-h6">{{ collection.title }}</h3>
+            <span class="col text-overline block q-py-sm">${{ collection.price }}</span>
+            <q-btn align="left" class="q-px-none full-width" flat>SHOP NOW</q-btn>
           </div>
         </q-card>
       </div>
