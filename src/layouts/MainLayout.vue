@@ -9,6 +9,7 @@
             class="q-ml-sm"
             dense
             flat
+            no-caps
             v-for="(item, idx) in menu"
             :key="`menu-${idx}`"
             :to="item.path"
