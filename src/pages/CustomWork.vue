@@ -2,7 +2,7 @@
   <q-page>
     <Banner title="Custom Work" :breadcrumbs="['Home', 'Custom Work']" />
     <section class="container row q-col-gutter-md q-mb-xxl">
-      <div class="col column justify-center q-gutter-y-lg">
+      <div class="col-12 col-md-6 column justify-center q-gutter-y-lg">
         <h3 class="text-h3">Custom Jewelry: Crafted Just for You</h3>
         <p class="text-content">
           Design a piece that tells your unique story. Work closely with Jasmine Lee to create a
@@ -13,12 +13,12 @@
           >Book a Consultation</q-btn
         >
       </div>
-      <img class="col" src="custom1.jpg" />
+      <img class="col-12 col-md-6" src="custom1.jpg" />
     </section>
     <section class="bg-yellow-4 q-my-xxl">
-      <div class="q-pt-xl row container q-col-gutter-md q-mb-xl">
+      <div class="q-pt-xl q-px-md row container q-col-gutter-md q-mb-xl">
         <h3 class="col-12 text-center text-h4 q-pb-lg">Our Custom Collection</h3>
-        <div class="col-3" v-for="(work, idx) in CustomWork" :key="`work-${idx}`">
+        <div class="col-12 col-md-3" v-for="(work, idx) in CustomWork" :key="`work-${idx}`">
           <BaseCard :title="work.name" :price="work.price" img-path="custom5.jpg" />
         </div>
         <div class="col-12 q-py-xl text-center">
@@ -29,7 +29,7 @@
 
     <section class="q-pb-xl row container q-col-gutter-md">
       <h3 class="col-12 text-center q-pb-lg q-mb-xxl text-h4">Our Custom jewelry Process</h3>
-      <div class="col-6" v-for="(item, idx) in process" :key="`process-${idx}`">
+      <div class="col-12 col-md-6" v-for="(item, idx) in process" :key="`process-${idx}`">
         <q-card flat bordered>
           <q-card-section class="bg-primary text-content">
             {{ idx + 1 }}. {{ item.step }}

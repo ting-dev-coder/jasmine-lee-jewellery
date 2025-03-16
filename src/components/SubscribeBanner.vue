@@ -1,16 +1,16 @@
 <template>
   <section class="row q-py-xl bg-yellow-2">
     <div class="row container q-mx-auto q-col-gutter-md">
-      <div class="col-6">
+      <div class="col-12 col-md-6">
         <h3 class="text-h4">Sign Up Today</h3>
         <p class="q-py-md text-overline">
           Stay updated with the latest collections, exclusive promotions, and special offers. Sign
           up today to receive all the exciting news from Jasmine Lee jewelry!
         </p>
       </div>
-      <div class="col-6">
-        <q-form @submit="onSubmit" class="q-col-gutter-md">
-          <div class="row q-gutter-md">
+      <div class="col-12 col-md-6">
+        <q-form @submit="onSubmit" class="q-col-gutter-md q-pr-md q-pr-md-none">
+          <div class="row q-col-gutter-md">
             <q-input
               class="col"
               bg-color="white"

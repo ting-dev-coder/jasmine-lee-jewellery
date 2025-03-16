@@ -4,9 +4,9 @@
     <div class="q-mt-xl q-mb-md container q-mx-auto row justify-end">
       <q-select bg-color="primary" filled v-model="priceOrder" :options="options" dense />
     </div>
-    <div class="container q-mx-auto row q-col-gutter-md">
+    <div class="container q-mx-auto row q-col-gutter-md q-pr-md q-pr-sm-none">
       <div
-        class="col-4 col-md-3"
+        class="col-12 col-md-4 col-lg-3"
         v-for="(collection, idx) in Collections"
         :key="`collection-${idx}`"
       >

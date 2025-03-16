@@ -2,7 +2,7 @@
   <q-page>
     <Banner title="About" :breadcrumbs="['Home', 'About']" />
     <section class="q-px-xl row q-col-gutter-lg">
-      <div class="col column justify-center">
+      <div class="col-12 col-md-6 column justify-center">
         <h3 class="text-h3">Meet the Designer</h3>
         <p class="q-py-lg text-content">
           Jasmine Lee is a passionate jewelry designer based in Vancouver, British Columbia. With a
@@ -13,7 +13,7 @@
           experience the artistry that makes each piece truly special.
         </p>
       </div>
-      <img class="col" src="designer.jpg" />
+      <img class="col-12 col-md-6" src="designer.jpg" />
     </section>
     <section class="q-py-xl q-px-xl q-my-xl">
       <h3 class="text-center text-h4 q-pb-xl">Frequently Asked Questions</h3>
