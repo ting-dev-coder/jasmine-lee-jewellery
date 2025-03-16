@@ -1,6 +1,6 @@
 <template>
   <section class="bg-yellow-3 q-pt-md">
-    <div class="container">
+    <div class="container q-px-md">
       <q-breadcrumbs style="font-size: 16px">
         <q-breadcrumbs-el
           class="text-black"

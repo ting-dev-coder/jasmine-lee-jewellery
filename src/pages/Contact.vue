@@ -43,9 +43,15 @@
     </div>
     <div class="bg-grey-3 q-py-xl q-col-gutter-md">
       <div class="container row">
-        <div class="col">(123) 456-7890</div>
-        <div class="col">xyz@example.com</div>
-        <div class="col">Mon - Fri: 7A.M - 6 P.M</div>
+        <div class="col text-center">
+          <q-icon class="q-mr-md" name="phone" size="md" />(123) 456-7890
+        </div>
+        <div class="col text-center">
+          <q-icon class="q-mr-md" name="email" size="md" />xyz@example.com
+        </div>
+        <div class="col text-center">
+          <q-icon class="q-mr-md" name="timer" size="md" />Mon - Fri: 7A.M - 6 P.M
+        </div>
       </div>
     </div>
   </q-page>
