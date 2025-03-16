@@ -1,9 +1,9 @@
 <template>
-  <section class="row q-py-xl bg-grey-5">
+  <section class="row q-py-xl bg-yellow-2">
     <div class="row container q-mx-auto q-col-gutter-md">
       <div class="col-6">
-        <h3>Sign Up Today</h3>
-        <p class="q-py-md">
+        <h3 class="text-h4">Sign Up Today</h3>
+        <p class="q-py-md text-overline">
           Stay updated with the latest collections, exclusive promotions, and special offers. Sign
           up today to receive all the exciting news from Jasmine Lee jewelry!
         </p>
@@ -13,7 +13,8 @@
           <div class="row q-gutter-md">
             <q-input
               class="col"
-              filled
+              bg-color="white"
+              outlined
               dense
               v-model="name"
               label="Name"
@@ -24,7 +25,8 @@
 
             <q-input
               class="col"
-              filled
+              bg-color="white"
+              outlined
               dense
               type="email"
               v-model="email"
@@ -36,7 +38,7 @@
           </div>
 
           <div>
-            <q-btn class="full-width" label="Submit" type="submit" color="primary" />
+            <q-btn unelevated class="full-width" label="Submit" type="submit" color="primary" />
           </div>
         </q-form>
       </div>

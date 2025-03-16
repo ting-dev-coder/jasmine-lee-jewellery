@@ -1,0 +1,28 @@
+@use 'quasar/src/css/variables' as q;
+
+$container-padding: 20px;
+
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: q.$breakpoint-sm-min) {
+  .container,
+  .container-sm {
+    max-width: q.$breakpoint-xs - $container-padding;
+  }
+}
+
+@media (min-width: q.$breakpoint-md-min) {
+  .container,
+  .container-sm,
+  .container-md {
+    max-width: q.$breakpoint-sm - $container-padding;
+  }
+}

@@ -1,9 +1,10 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header style="height: 100px" class="bg-grey-6">
+    <q-header style="height: 100px" class="q-py-md bg-grey">
       <div class="container flex justify-between align-items full-height">
-        <img style="height: 100%" src="logo.png" />
-        <ul class="self-center">
+        <h1 class="full-height"><img style="height: 100%" src="logo.png" /></h1>
+
+        <ul class="self-center text-dark">
           <q-btn
             class="q-ml-sm"
             dense
