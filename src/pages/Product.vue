@@ -3,9 +3,9 @@
     <Banner
       :breadcrumbs="['Home', 'Collections', 'Silver Collection', 'Sterling Silver Hoop Earrings']"
     />
-    <section class="q-pt-xl container row q-col-gutter-lg">
+    <section class="q-pt-xl container items-center row q-col-gutter-lg">
       <q-carousel
-        class="col bg-primary text-white shadow-1 rounded-borders"
+        class="col"
         v-model="slide"
         transition-prev="scale"
         transition-next="scale"
@@ -13,31 +13,20 @@
         animated
         control-color="white"
         navigation
-        padding
         arrows
-        height="300px"
       >
-        <!-- <q-carousel-slide name="style" class="column no-wrap flex-center">
-          <img src="image-placeholder.png" />
-        </q-carousel-slide> -->
         <q-carousel-slide
-          v-for="(slid, idx) in 5"
+          v-for="(slider, idx) in sliders"
           :key="`slider-${idx}`"
           :name="idx"
-          class="column no-wrap flex-center"
+          :img-src="slider"
         >
-          <q-icon name="layers" size="56px" />
-          <div class="q-mt-md text-center">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis corrupti facilis
-            perspiciatis repellendus distinctio facere dolorum quas sunt reiciendis, sequi,
-            asperiores sed iure vitae? Deleniti numquam fugiat voluptates saepe placeat.
-          </div>
         </q-carousel-slide>
       </q-carousel>
       <div class="col q-gutter-y-md">
-        <h2>Sterling Silver Hoop Earrings</h2>
-        <span class="block">$150</span>
-        <p>
+        <h2 class="text-h3">Sterling Silver Hoop Earrings</h2>
+        <span class="block text-h5">$150</span>
+        <p class="text-weight-regular text-h5">
           Elevate your style with our Sterling Silver Hoop Earrings, a perfect blend of
           sophistication and everyday wearability. Designed for the modern minimalist, these hoops
           are handcrafted from high-quality sterling silver, offering a sleek and polished finish
@@ -47,8 +36,8 @@
       </div>
     </section>
     <section class="q-py-xl container row q-col-gutter-md">
-      <div class="col">
-        <h3 class="q-pb-md">Product Details</h3>
+      <div class="col text-h5 text-weight-regular">
+        <h3 class="q-pb-md text-h4">Product Details</h3>
         <p><strong>Material:</strong> 925 Sterling Silver</p>
         <p><strong>Size Options: </strong> [Small – 20mm, Medium – 30mm, Large – 50mm]r</p>
         <p>
@@ -59,9 +48,9 @@
         <p>Hypoallergenic & Tarnish-Resistant</p>
       </div>
       <div class="col">
-        <h3>Reviews</h3>
+        <h3 class="text-h4">Reviews</h3>
         <p class="q-py-md">There are no reviews yet.</p>
-        <bold>Be the first to review "Sterling Silver Hoop Earrings"</bold>
+        <strong>Be the first to review "Sterling Silver Hoop Earrings"</strong>
         <div class="q-py-lg">
           <p>Your Review</p>
           <q-rating v-model="ratingModel" size="2em" :max="5" color="primary" />
@@ -70,6 +59,7 @@
         <q-form class="q-gutter-md">
           <q-input
             filled
+            bg-color="primary"
             v-model="form.name"
             label="Your Name"
             lazy-rules
@@ -79,6 +69,7 @@
 
           <q-input
             filled
+            bg-color="primary"
             hide-bottom-space
             type="email"
             v-model="form.email"
@@ -86,8 +77,16 @@
             lazy-rules
             :rules="[(val) => (val !== null && val !== '') || 'Please type your email']"
           />
+          <q-input bg-color="primary" v-model="form.message" filled type="textarea" />
           <div>
-            <q-btn class="full-width" label="Submit" type="submit" color="primary" />
+            <q-btn
+              class="full-width"
+              label="Submit"
+              type="submit"
+              text-color="black"
+              color="primary"
+              unelevated
+            />
           </div>
         </q-form>
       </div>
@@ -102,7 +101,7 @@
           flat
           :title="work.name"
           :price="work.price"
-          :img-path="work.imagePath"
+          img-path="custom5.jpg"
         />
       </div>
     </section>
@@ -127,5 +126,8 @@ const ratingModel = ref(0)
 const form = ref({
   name: '',
   email: '',
+  message: '',
 })
+
+const sliders = ['gemstone1.jpg', 'gemstone2.jpg', 'gemstone3.jpg']
 </script>
