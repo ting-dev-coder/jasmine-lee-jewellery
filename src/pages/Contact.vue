@@ -3,7 +3,7 @@
     <Banner title="Contact" :breadcrumbs="['Home', 'Contact']" />
 
     <div class="q-mb-xl q-pa-md q-mx-auto" style="max-width: 550px">
-      <h3 class="text-center q-pb-xl">Drop a Messemail</h3>
+      <h3 class="text-center q-pb-xl text-h4">Drop a Messemail</h3>
       <q-form @submit="onSubmit" class="q-gutter-md">
         <q-input
           filled
