@@ -3,8 +3,8 @@
     <Banner title="About" :breadcrumbs="['Home', 'About']" />
     <section class="q-px-xl row q-col-gutter-lg">
       <div class="col column justify-center">
-        <h3>Meet the Designer</h3>
-        <p class="q-py-lg">
+        <h3 class="text-h3">Meet the Designer</h3>
+        <p class="q-py-lg text-content">
           Jasmine Lee is a passionate jewelry designer based in Vancouver, British Columbia. With a
           deep appreciation for artistry and craftsmanship, Jasmine creates timeless pieces that
           blend contemporary style with traditional techniques. Every design is crafted with
@@ -13,21 +13,22 @@
           experience the artistry that makes each piece truly special.
         </p>
       </div>
-      <img class="col" src="image-placeholder.png" />
+      <img class="col" src="designer.jpg" />
     </section>
-    <section class="q-px-xl q-my-xl">
-      <h3 class="text-center">Frequently Asked Questions</h3>
+    <section class="q-py-xl q-px-xl q-my-xl">
+      <h3 class="text-center text-h4 q-pb-xl">Frequently Asked Questions</h3>
       <q-list>
         <q-expansion-item
           class="q-mt-md"
           v-for="(qa, idx) in QUESTIONS"
           :key="`q-${idx}`"
           expand-separator
-          :label="qa.question"
-          header-class="bg-grey-5"
+          bordered
+          :label="`${idx + 1}. ${qa.question}`"
+          header-class="bg-primary text-content"
         >
           <q-card>
-            <q-card-section>
+            <q-card-section class="text-h6 text-weight-regular">
               {{ qa.answer }}
             </q-card-section>
           </q-card>
