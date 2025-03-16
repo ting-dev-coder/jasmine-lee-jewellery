@@ -13,6 +13,17 @@
             designs, discover the inspiration, materials, and craftsmanship that make each piece
             unique.
           </p>
+          <div class="row q-gutter-md">
+            <a class="block" href="https://www.facebook.com/NICDGL/">
+              <img style="width: 32px; height: 32px" src="icon-facebook.png"
+            /></a>
+            <a class="block" href="https://www.instagram.com/">
+              <img style="width: 32px; height: 32px" src="icon-ig.png"
+            /></a>
+            <a class="block" href="https://x.com/?lang=en">
+              <img style="width: 30px; height: 30px" src="icon-twitter.png"
+            /></a>
+          </div>
         </div>
         <div class="col-12 col-md-4">
           <h4 class="q-pb-xs text-h5">Quick Links</h4>

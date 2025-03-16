@@ -41,7 +41,7 @@
         </div>
       </q-form>
     </div>
-    <div class="bg-grey-3 q-py-xl q-col-gutter-md">
+    <div class="bg-yellow-5 q-py-xl q-col-gutter-md">
       <div class="container row">
         <div class="col text-center">
           <q-icon class="q-mr-md" name="phone" size="md" />(123) 456-7890
