@@ -1,6 +1,7 @@
 {
   "name": "jasmine-lee-jewelry",
   "version": "0.0.1",
+  "type": "module",
   "description": "A Quasar SSR Project",
   "productName": "Quasar SSR App",
   "author": "ting-dev-coder <missjoker59@gmail.com>",
