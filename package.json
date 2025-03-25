@@ -1,28 +1,28 @@
 {
   "name": "jasmine-lee-jewelry",
   "version": "0.0.1",
-  "description": "A Quasar Project",
-  "productName": "Quasar App",
+  "description": "A Quasar SSR Project",
+  "productName": "Quasar SSR App",
   "author": "ting-dev-coder <missjoker59@gmail.com>",
-  "type": "module",
   "private": true,
   "scripts": {
     "lint": "eslint -c ./eslint.config.js \"./src*/**/*.{js,cjs,mjs,vue}\"",
     "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
     "dev": "quasar dev",
-    "build": "quasar build",
-    "postinstall": "quasar prepare",
+    "build": "npx quasar build -m ssr",  // 使用 SSR 模式構建
+    "postinstall": "npx quasar prepare",  // 準備 Quasar
     "deploy": "vercel"
   },
   "dependencies": {
     "@quasar/extras": "^1.16.4",
     "quasar": "^2.16.0",
-    "vercel-quasar": "^0.5.1",
     "vue": "^3.4.18",
-    "vue-router": "^4.0.0"
+    "vue-router": "^4.0.0",
+    "vercel-quasar": "^0.5.1"
   },
   "devDependencies": {
+    "@quasar/cli": "^2.0.0",  // 確保有安裝 @quasar/cli
     "@eslint/js": "^9.14.0",
     "@quasar/app-vite": "^2.1.0",
     "@vue/eslint-config-prettier": "^10.1.0",
@@ -36,8 +36,6 @@
     "vite-plugin-checker": "^0.8.0"
   },
   "engines": {
-    "node": "^28 || ^26 || ^24 || ^22 || ^20 || ^18",
-    "npm": ">= 6.13.4",
-    "yarn": ">= 1.21.1"
+    "node": "20.x"
   }
 }
