@@ -13,7 +13,7 @@
     "dev": "quasar dev",
     "build": "quasar build",
     "postinstall": "quasar prepare",
-    "deploy": "quasar build && push-dir --dir=dist/spa --remote=origin --branch=gh-pages"
+    "vercel-build": "yarn global add @quasar/cli && quasar build"
   },
   "dependencies": {
     "@quasar/extras": "^1.16.4",
