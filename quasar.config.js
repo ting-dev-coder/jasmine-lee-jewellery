@@ -57,7 +57,6 @@ export default defineConfig((/* ctx */) => {
       extendViteConf(viteConf, { isServer, isClient }) {
         viteConf.resolve.extensions = ['.vue', '.js', '.ts']
         Object.assign(viteConf.resolve.alias, {
-          '#q-app': '@quasar/app-vite',
           '@': path.resolve(__dirname, 'src'),
           '@components': path.resolve(__dirname, 'src/components'),
         })
@@ -141,9 +140,6 @@ export default defineConfig((/* ctx */) => {
 
       // pwaExtendGenerateSWOptions (cfg) {},
       // pwaExtendInjectManifestOptions (cfg) {}
-      manualStoreHydration: true,
-      prodDevtools: false,
-      serverFile: 'src-ssr/server.js',
     },
 
     // https://v2.quasar.dev/quasar-cli-vite/developing-pwa/configuring-pwa
