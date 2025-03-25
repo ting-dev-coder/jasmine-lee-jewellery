@@ -57,6 +57,7 @@ export default defineConfig((/* ctx */) => {
       extendViteConf(viteConf, { isServer, isClient }) {
         viteConf.resolve.extensions = ['.vue', '.js', '.ts']
         Object.assign(viteConf.resolve.alias, {
+          '#q-app': '@quasar/app-vite',
           '@': path.resolve(__dirname, 'src'),
           '@components': path.resolve(__dirname, 'src/components'),
         })
