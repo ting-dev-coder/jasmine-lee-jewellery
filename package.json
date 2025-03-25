@@ -11,9 +11,10 @@
     "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
     "dev": "quasar dev",
-    "build": "npx quasar build -m ssr",
     "postinstall": "npx quasar prepare",
-    "deploy": "vercel"
+    "deploy": "vercel",
+    "build": "quasar build -m ssr",
+    "start": "node dist/ssr/server.js"
   },
   "dependencies": {
     "@quasar/extras": "^1.16.4",
