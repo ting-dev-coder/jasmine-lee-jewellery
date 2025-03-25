@@ -1,10 +1,6 @@
 import express from 'express'
 import compression from 'compression'
-import {
-  defineSsrCreate,
-  defineSsrServeStaticContent,
-  defineSsrRenderPreloadTag,
-} from '#q-app/wrappers'
+import { defineSsrCreate } from '#q-app/wrappers'
 
 export const create = defineSsrCreate(() => {
   const app = express()
