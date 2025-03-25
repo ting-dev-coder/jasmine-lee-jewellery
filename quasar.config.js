@@ -55,6 +55,8 @@ export default defineConfig((/* ctx */) => {
       // distDir
 
       extendViteConf(viteConf, { isServer, isClient }) {
+        viteConf.resolve.alias['#q-app/wrappers'] = resolve(__dirname, '.quasar', 'app', 'wrappers')
+
         viteConf.resolve.extensions = ['.vue', '.js', '.ts']
         Object.assign(viteConf.resolve.alias, {
           '@': path.resolve(__dirname, 'src'),
