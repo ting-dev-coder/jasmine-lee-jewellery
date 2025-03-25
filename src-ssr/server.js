@@ -2,7 +2,6 @@ import express from 'express'
 import compression from 'compression'
 import {
   defineSsrCreate,
-  defineSsrListen,
   defineSsrRenderPreloadTag,
   defineSsrServeStaticContent,
 } from '#q-app/wrappers'
@@ -21,14 +20,7 @@ export const create = defineSsrCreate(() => {
   return app
 })
 
-// 為開發模式導出 listen，但在 Vercel 部署中不會被用到
-export const listen = defineSsrListen(({ app, port }) => {
-  return app.listen(port, () => {
-    console.log(`Server listening on port ${port}`)
-  })
-})
-
-// 提供預加載標籤（此處提供簡單實現，根據需要可擴展）
+// 提供預加載標籤
 export const renderPreloadTag = defineSsrRenderPreloadTag((file) => {
   // 根據檔案類型返回適當的標籤
   if (file.endsWith('.js')) {
@@ -40,7 +32,7 @@ export const renderPreloadTag = defineSsrRenderPreloadTag((file) => {
   return ''
 })
 
-// 處理靜態內容，這裡簡單使用 Express 的 static 中介軟體
+// 處理靜態內容
 export const serveStaticContent = defineSsrServeStaticContent(({ app, resolve }) => {
   return ({ urlPath = '/', pathToServe = '.' }) => {
     app.use(urlPath, express.static(resolve.public(pathToServe)))
