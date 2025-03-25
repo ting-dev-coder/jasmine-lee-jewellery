@@ -140,7 +140,6 @@ export default defineConfig((/* ctx */) => {
 
       // pwaExtendGenerateSWOptions (cfg) {},
       // pwaExtendInjectManifestOptions (cfg) {}
-
       manualStoreHydration: true,
       prodDevtools: false,
       serverFile: 'src-ssr/server.js',
