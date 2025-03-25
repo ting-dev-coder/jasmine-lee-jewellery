@@ -1,15 +1,16 @@
 {
   "version": 2,
+  "buildCommand": "yarn install && npx quasar prepare && npx quasar build -m ssr",
   "builds": [
     {
-      "src": "dist/ssr/index.js",
+      "src": "src-ssr/server.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "dist/ssr/index.js"
+      "dest": "/src-ssr/server.js"
     }
   ]
 }
