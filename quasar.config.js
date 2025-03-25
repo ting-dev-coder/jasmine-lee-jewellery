@@ -140,6 +140,9 @@ export default defineConfig((/* ctx */) => {
 
       // pwaExtendGenerateSWOptions (cfg) {},
       // pwaExtendInjectManifestOptions (cfg) {}
+
+      manualStoreHydration: true,
+      prodDevtools: false,
     },
 
     // https://v2.quasar.dev/quasar-cli-vite/developing-pwa/configuring-pwa
