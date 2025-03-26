@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "yarn build:verbose",
+  "buildCommand": "yarn install && yarn build:verbose",
   "builds": [
     {
       "src": "dist/ssr/server.js",
