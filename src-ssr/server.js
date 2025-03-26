@@ -1,11 +1,10 @@
 import express from 'express'
 import compression from 'compression'
 import {
-  createServer,
   defineSsrCreate,
   defineSsrRenderPreloadTag,
   defineSsrServeStaticContent,
-} from '#q-app/wrappers'
+} from '@quasar/ssr/wrappers'
 
 // 建立 SSR 應用
 export const create = defineSsrCreate(() => {
