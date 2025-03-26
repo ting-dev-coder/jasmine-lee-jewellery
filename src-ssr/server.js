@@ -4,7 +4,8 @@ import {
   defineSsrCreate,
   defineSsrRenderPreloadTag,
   defineSsrServeStaticContent,
-} from '@quasar/ssr/wrappers'
+} from '#q-app/wrappers'
+//from '@quasar/ssr/wrappers'
 
 // 建立 SSR 應用
 export const create = defineSsrCreate(() => {
@@ -38,6 +39,12 @@ export const serveStaticContent = defineSsrServeStaticContent(({ app, resolve })
     app.use(urlPath, express.static(resolve.public(pathToServe)))
   }
 })
+
+export const listen = (app, port) => {
+  app.listen(port, () => {
+    console.log(`Server is running on port ${port}`)
+  })
+}
 
 // 對於 Vercel 部署，直接導出 create() 作為 handler
 export default create()
