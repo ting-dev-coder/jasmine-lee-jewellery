@@ -12,8 +12,9 @@
     "test": "echo \"No test specified\" && exit 0",
     "dev": "quasar dev",
     "build": "quasar build",
-    "postinstall": "quasar prepare",
-    "deploy": "quasar build && push-dir --dir=dist/spa --remote=origin --branch=gh-pages"
+    "dev:ssr": "quasar dev -m ssr",
+    "build:ssr": "quasar build -m ssr",
+    "postinstall": "quasar prepare"
   },
   "dependencies": {
     "@quasar/extras": "^1.16.4",
