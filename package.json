@@ -13,7 +13,9 @@
     "dev": "npx quasar dev",
     "build": "npx quasar build",
     "postinstall": "npx quasar prepare",
-    "deploy": "gh-pages -d dist/ssr"
+    "deploy": "gh-pages -d dist/spa",
+    "build:ssg": "quasar ssg generate",
+    "serve:ssg": "quasar ssg serve dist/ssg"
   },
   "dependencies": {
     "@quasar/cli": "^2.0.0",
