@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "yarn install && npx quasar prepare && yarn build:verbose",
+  "buildCommand": "yarn install && npx quasar prepare && quasar build -m ssr",
   "outputDirectory": "dist/ssr",
   "builds": [
     {

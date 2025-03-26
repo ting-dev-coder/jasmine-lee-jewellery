@@ -17,8 +17,7 @@
     "postinstall": "npx quasar prepare",
     "deploy": "vercel",
     "build": "quasar build -m ssr",
-    "build:verbose": "quasar build -m ssr --verbose",
-    "start": "node dist/ssr/server.js"
+    "build:verbose": "quasar build -m ssr --verbose"
   },
   "dependencies": {
     "@quasar/extras": "^1.16.4",

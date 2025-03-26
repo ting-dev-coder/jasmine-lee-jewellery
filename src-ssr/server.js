@@ -1,26 +1,43 @@
 import express from 'express'
-import { fileURLToPath } from 'url'
-import { dirname, resolve } from 'path'
 import compression from 'compression'
+import {
+  defineSsrCreate,
+  defineSsrRenderPreloadTag,
+  defineSsrServeStaticContent,
+} from '@quasar/ssr/wrappers'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-
-export const create = () => {
+// 建立 SSR 應用
+export const create = defineSsrCreate(() => {
   const app = express()
 
-  // 压缩
-  app.use(compression())
+  // 移除 Express 預設標頭，提升安全性
+  app.disable('x-powered-by')
 
-  // 静态文件服务
-  app.use(express.static(resolve(__dirname, '../dist/spa')))
-
-  // 处理所有路由
-  app.get('*', (req, res) => {
-    res.sendFile(resolve(__dirname, '../dist/spa/index.html'))
-  })
+  if (process.env.PROD) {
+    app.use(compression())
+  }
 
   return app
-}
+})
 
+// 提供預加載標籤
+export const renderPreloadTag = defineSsrRenderPreloadTag((file) => {
+  // 根據檔案類型返回適當的標籤
+  if (file.endsWith('.js')) {
+    return `<link rel="modulepreload" href="${file}" crossorigin>`
+  }
+  if (file.endsWith('.css')) {
+    return `<link rel="stylesheet" href="${file}" crossorigin>`
+  }
+  return ''
+})
+
+// 處理靜態內容
+export const serveStaticContent = defineSsrServeStaticContent(({ app, resolve }) => {
+  return ({ urlPath = '/', pathToServe = '.' }) => {
+    app.use(urlPath, express.static(resolve.public(pathToServe)))
+  }
+})
+
+// 對於 Vercel 部署，直接導出 create() 作為 handler
 export default create()
