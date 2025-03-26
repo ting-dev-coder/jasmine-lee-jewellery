@@ -1,7 +1,6 @@
 {
   "version": 2,
   "buildCommand": "yarn build:verbose",
-  "outputDirectory": "dist/ssr",
   "builds": [
     {
       "src": "dist/ssr/server.js",
